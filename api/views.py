@@ -2,8 +2,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 # import librosa
-import numpy as np
-import os
+# import numpy as np
+# import os
 
 """
 def detect_bell_sound(audio_file):
@@ -40,7 +40,7 @@ def index(request):
             # Realizar la detección de sonido de campana
             #resultado = detect_bell_sound('temp_audio.wav')
             # Eliminar el archivo de audio temporal
-            os.remove('temp_audio.wav')
+            #os.remove('temp_audio.wav')
             # Crear la respuesta de la API
             content = {
                 'data': {
