@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import librosa
 import os 
-import numpy
+import numpy as np
 
 
 def detect_bell_sound(audio_file):
@@ -44,7 +44,7 @@ def index(request):
             content = {
                 'data': {
                     'code': 200,
-                    'msg': 'Adios',
+                    'msg': resultado,
                 }
             }
             return Response(content, status=status.HTTP_200_OK)
