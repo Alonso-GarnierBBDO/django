@@ -38,14 +38,14 @@ def index(request):
                 for chunk in audio_file.chunks():
                     temp_audio.write(chunk)
             # Realizar la detección de sonido de campana
-            resultado = detect_bell_sound('temp_audio.wav')
+            #resultado = detect_bell_sound('temp_audio.wav')
             # Eliminar el archivo de audio temporal
             #os.remove('temp_audio.wav')
             # Crear la respuesta de la API
             content = {
                 'data': {
                     'code': 200,
-                    'msg': 'Hola',
+                    'msg': 'Adios',
                 }
             }
             return Response(content, status=status.HTTP_200_OK)
