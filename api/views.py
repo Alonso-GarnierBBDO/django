@@ -2,8 +2,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 # import librosa
-import numpy as np
-import os
+#import numpy as np
+#import os
 
 """
 def detect_bell_sound(audio_file):
