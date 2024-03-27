@@ -5,7 +5,7 @@ import librosa
 import os 
 import numpy
 
-"""
+
 def detect_bell_sound(audio_file):
     # Leer el archivo de audio
     y, sr = librosa.load(audio_file)
@@ -23,7 +23,6 @@ def detect_bell_sound(audio_file):
         return "¡Se detectó el sonido de una campana!"
     else:
         return "No se detectó el sonido de una campana."
-"""
 
 
 @api_view(['POST'])
@@ -38,7 +37,7 @@ def index(request):
                 for chunk in audio_file.chunks():
                     temp_audio.write(chunk)
             # Realizar la detección de sonido de campana
-            #resultado = detect_bell_sound('temp_audio.wav')
+            resultado = detect_bell_sound('temp_audio.wav')
             # Eliminar el archivo de audio temporal
             #os.remove('temp_audio.wav')
             # Crear la respuesta de la API
